@@ -3,7 +3,7 @@ from typing import *
 from discord.ext import commands
 from dotenv import load_dotenv
 
-
+#hehe
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
 
@@ -27,7 +27,7 @@ class MyBot(commands.Bot):
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = MyBot(command_prefix='!', intents=intents)
+bot = MyBot(command_prefix='!', intents=intents, help_command=None)
 
 @bot.command()
 @commands.guild_only()

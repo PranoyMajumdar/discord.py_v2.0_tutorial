@@ -50,5 +50,21 @@ class Misc(commands.Cog):
 
 
 
+
+
+    @commands.hybrid_command(name='help', description='Shows a list of commands.')
+    async def help(self, ctx):
+        embed=discord.Embed(title="Bot Help Command", description="This is very nice bot", color=0xff0000)
+        for c in self.bot.cogs:
+            cog = self.bot.get_cog(c)
+            if len([cog.walk_commands()]):
+                embed.add_field(name=cog.qualified_name, value=', '.join(f"`{i.name}`" for i in cog.walk_commands()))
+        
+        await ctx.send(embed=embed)
+
+
+
+
+
 async def setup(bot: commands.Bot):
     await bot.add_cog(Misc(bot))
