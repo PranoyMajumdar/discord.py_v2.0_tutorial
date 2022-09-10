@@ -1,29 +1,5 @@
-# **Hybrid command example**
-
-#### @commands.hybrid_command(name='Ping', with_app_command=True, description='Shows the bot latency.')
-
-<br>
-
-## Parameters:
-- name (str) – The name to create the command with. By default this uses the function name unchanged.
-
-- with_app_command (bool) – Whether to register the command as an application command.
-
-- **attrs – Keyword arguments to pass into the construction of the hybrid command
-
-
-<br>
-
-
-#### @commands.hybrid_group(name='channel', with_app_command=True, description='Parent command of channel')
-
-## Parameters:
-- name (str) – The name to create the command with. By default this uses the function name unchanged.
-
-- with_app_command (bool) – Whether to register the command as an application command.
-
-- **attrs – Keyword arguments to pass into the construction of the hybrid command
-
-##### @channel.command(name='create', description='Create a channel')
-
-- name (str) – The name to create the command with. By default this uses the function name unchanged.
+# Barby Discord Bot 
+Multi-purpose bot made with discord.py
+## ℹ️ • Info
+This project is under developement also you can watch the tutorial [Youtibe](https://www.youtube.com/playlist?list=PLFFERV_IOftYQQymgyqFR9YuO5iUYnlof&utm_source=EJGixIgBCJiu2KjB4oSJEQ)
+<!-- Barby is a multi-purpose bot, made to satisfy your needs, as well as your server's needs too! This project is open source so that other developers could work on it and make it even better! -->
