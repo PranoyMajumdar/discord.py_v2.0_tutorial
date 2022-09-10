@@ -6,10 +6,12 @@ from dotenv import load_dotenv
 #hehe
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
+intents = discord.Intents.default()
+intents.message_content = True
 
 class MyBot(commands.Bot):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self):
+        super().__init__(command_prefix='!', intents=intents, help_command=None)
 
 
     async def on_ready(self):
@@ -22,12 +24,7 @@ class MyBot(commands.Bot):
                 await self.load_extension(f"cogs.{fn[:-3]}")
     
 
-
-
-intents = discord.Intents.default()
-intents.message_content = True
-
-bot = MyBot(command_prefix='!', intents=intents, help_command=None)
+bot = MyBot()
 
 @bot.command()
 @commands.guild_only()

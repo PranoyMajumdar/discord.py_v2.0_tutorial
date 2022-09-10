@@ -37,21 +37,6 @@ class Misc(commands.Cog):
         await ctx.send(f"{role} added to {user.mention}!")
 
 
-    @commands.hybrid_group(name='parent', description='This is the parent command')
-    async def parent(self, ctx):
-        pass
-
-    @parent.command(name='subcommand', description='This is a sub command')
-    async def subcommand(self, ctx):
-        await ctx.send("Hii! Im subcommand.", ephemeral=True)
-
-
-
-
-
-
-
-
     @commands.hybrid_command(name='help', description='Shows a list of commands.')
     async def help(self, ctx):
         embed=discord.Embed(title="Bot Help Command", description="This is very nice bot", color=0xff0000)
@@ -61,9 +46,6 @@ class Misc(commands.Cog):
                 embed.add_field(name=cog.qualified_name, value=', '.join(f"`{i.name}`" for i in cog.walk_commands()))
         
         await ctx.send(embed=embed)
-
-
-
 
 
 async def setup(bot: commands.Bot):
