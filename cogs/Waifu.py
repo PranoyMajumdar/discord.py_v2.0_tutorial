@@ -11,7 +11,7 @@ class Waifus(commands.Cog):
 
     async def getWaifu(self, tag):
         async with ClientSession() as resp:
-            async with resp.get(f'https://api.waifu.im/random/?selected_tags={tag}') as response:
+            async with resp.get(f'https://api.waifu.im/search/?included_tags={tag}') as response:
                 data = await response.json()
         return data['images'][0]['url']
 
